@@ -1,15 +1,30 @@
-print("Hello Pico World")
-
-# simplist Blinky program
 from machine import Pin
 import time
-pin = PIN("LED", Pin.Out)
+
+# Setup the GPIO pin (GP10 or GP11) where your LED is connected
+led = Pin(10, Pin.OUT)  # Change 10 to 11 if using GPIO 11 for LED 2
 
 while True:
-    pin.value(1)
-    time.sleep(1)
-    pin.value(0)
-    time.sleep(1)
+    led.value(1)  # Turn the LED on
+    time.sleep(1)  # Wait for 1 second
+    led.value(0)  # Turn the LED off
+    time.sleep(1)  # Wait for 1 second
+
+
+# def new_func():
+#     print("Hello Pico World")
+
+# # simplist Blinky program
+#     from ctypes.wintypes import PINT
+#     from machine import Pin
+#     import time
+#     pin = PINT("LED", Pin.Out)
+
+#     while True:
+#         pin.value(1)
+#         time.sleep(1)
+#         pin.value(0)
+#         time.sleep(1)
 
 # Flash LED
 # from machine import Pin
@@ -36,4 +51,4 @@ while True:
     # pin = Pin(22, Pin.Out)
     # white True:
         # pin.value(1)
-        # pin.value(0)
+            # pin.value(0)
