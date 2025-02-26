@@ -1,14 +1,50 @@
+
+# Setup the GPIO pin (GP10 or GP11) where your LED is connected
+# led = Pin(10, Pin.OUT) 
+
+#  # Change 10 to 11 if using GPIO 11 for LED 2
+
+# while True:
+#     led.value(1)  # Turn the LED on
+#     time.sleep(1)  # Wait for 1 second
+#     led.value(0)  # Turn the LED off
+#     time.sleep(1)  # Wait for 1 second
+
 from machine import Pin
 import time
 
-# Setup the GPIO pin (GP10 or GP11) where your LED is connected
-led = Pin(10, Pin.OUT)  # Change 10 to 11 if using GPIO 11 for LED 2
+
+
+# Define the LEDs
+led1 = Pin(10, Pin.OUT)
+led2 = Pin(11, Pin.OUT)
+led3 = Pin(14, Pin.OUT)
+led4 = Pin(15, Pin.OUT, value=0)  # Explicitly set as output with initial low value
 
 while True:
-    led.value(1)  # Turn the LED on
-    time.sleep(1)  # Wait for 1 second
-    led.value(0)  # Turn the LED off
-    time.sleep(1)  # Wait for 1 second
+    led1.value(1)
+    led2.value(0)
+    led3.value(0)
+    led4.value(0)
+    time.sleep(0.5)
+
+    led1.value(0)
+    led2.value(1)
+    led3.value(0)
+    led4.value(0)
+    time.sleep(0.5)
+
+    led1.value(0)
+    led2.value(0)
+    led3.value(1)
+    led4.value(0)
+    time.sleep(0.5)
+
+    led1.value(0)
+    led2.value(0)
+    led3.value(0)
+    led4.value(1)  
+    time.sleep(0.5)
 
 
 # def new_func():
