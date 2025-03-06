@@ -1,0 +1,13 @@
+{
+    "python.linting.enabled": true,
+    "python.analysis.typeshedPaths": [
+        "~/.micropico-stubs/included"
+    ],
+    "python.languageServer": "Pylance",
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.extraPaths": [
+        "~/.micropico-stubs/included"
+    ],
+    "picowgo.syncFolder": "",
+    "picowgo.openOnStart": true
+}
