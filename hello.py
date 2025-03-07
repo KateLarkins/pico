@@ -10,6 +10,19 @@
     led.value(0)  # Turn the LED off
     time.sleep(1)  # Wait for 1 second
 
+print("Hello Pico World")
+
+# simplist Blinky program
+# from machine import Pin
+# import time
+# pin = PIN("LED", Pin.Out)
+
+# while True:
+#     pin.value(1)
+#     time.sleep(1)
+#     pin.value(0)
+#     time.sleep(1)
+
 from machine import Pin
 import time
 
@@ -19,7 +32,11 @@ led1 = Pin(10, Pin.OUT)
 led2 = Pin(11, Pin.OUT)
 led3 = Pin(14, Pin.OUT)
 led4 = Pin(15, Pin.OUT, value=0)  # Explicitly set as output with initial low value
+from utime import sleep
 
+pin = Pin("LED", Pin.OUT)
+
+print("LED starts flashing...")
 while True:
     led1.value(1)
     led2.value(0)
@@ -55,11 +72,18 @@ while True:
     import time
     pin = PINT("LED", Pin.Out)
 
-     while True:
-        pin.value(1)
-        time.sleep(1)
-         pin.value(0)
-        time.sleep(1)
+#     while True:
+#         pin.value(1)
+#         time.sleep(1)
+#         pin.value(0)
+#         time.sleep(1)
+    try:
+        pin.toggle()
+        sleep(1) # sleep 1sec
+    except KeyboardInterrupt:
+        break
+pin.off()
+print("Finished.")
 
  Flash LED
  from machine import Pin
