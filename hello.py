@@ -1,21 +1,20 @@
 
-# Setup the GPIO pin (GP10 or GP11) where your LED is connected
-# led = Pin(10, Pin.OUT) 
+ Setup the GPIO pin (GP10 or GP11) where your LED is connected
+ led = Pin(10, Pin.OUT) 
 
-#  # Change 10 to 11 if using GPIO 11 for LED 2
+ Change 10 to 11 if using GPIO 11 for LED 2
 
-# while True:
-#     led.value(1)  # Turn the LED on
-#     time.sleep(1)  # Wait for 1 second
-#     led.value(0)  # Turn the LED off
-#     time.sleep(1)  # Wait for 1 second
+ while True:
+    led.value(1)  # Turn the LED on
+    time.sleep(1)  # Wait for 1 second
+    led.value(0)  # Turn the LED off
+    time.sleep(1)  # Wait for 1 second
 
 from machine import Pin
 import time
 
 
-
-# Define the LEDs
+ Define the LEDs
 led1 = Pin(10, Pin.OUT)
 led2 = Pin(11, Pin.OUT)
 led3 = Pin(14, Pin.OUT)
@@ -47,44 +46,44 @@ while True:
     time.sleep(0.5)
 
 
-# def new_func():
-#     print("Hello Pico World")
+ def new_func():
+     print("Hello Pico World")
 
-# # simplist Blinky program
-#     from ctypes.wintypes import PINT
-#     from machine import Pin
-#     import time
-#     pin = PINT("LED", Pin.Out)
+ simplist Blinky program
+     from ctypes.wintypes import PINT
+     from machine import Pin
+    import time
+    pin = PINT("LED", Pin.Out)
 
-#     while True:
-#         pin.value(1)
-#         time.sleep(1)
-#         pin.value(0)
-#         time.sleep(1)
+     while True:
+        pin.value(1)
+        time.sleep(1)
+         pin.value(0)
+        time.sleep(1)
 
-# Flash LED
-# from machine import Pin
-# import time
-# pin = PIN(22, Pin.Out)
-# while True:
-#     pin.value(1)
-#     time.sleep(1)
-#     pin.value(0)
-#     time.sleep(1)
+ Flash LED
+ from machine import Pin
+ import time
+ pin = PIN(22, Pin.Out)
+ while True:
+    pin.value(1)
+    time.sleep(1)
+     pin.value(0)
+   time.sleep(1)
 
-# Easier Version of Blinky using toggle function
-# from machine import Pin
-# import time
-# pin = PIN(22, Pin.Out)
-# while True:
-    # pin.toggle()
-    # time.sleep(1) 
+ Easier Version of Blinky using toggle function
+from machine import Pin
+ import time
+ pin = PIN(22, Pin.Out)
+ while True:
+     pin.toggle()
+     time.sleep(1) 
 
-    # See summary pg.36 if it doesn't work
+ See summary pg.36 if it doesn't work
 
-# See how fast a single GPIO line can be used if you have a logic analyzer of oscilloscope
-    # from machine import Pin
-    # pin = Pin(22, Pin.Out)
-    # white True:
-        # pin.value(1)
-            # pin.value(0)
+ See how fast a single GPIO line can be used if you have a logic analyzer of oscilloscope
+     from machine import Pin
+     pin = Pin(22, Pin.Out)
+     white True:
+         pin.value(1)
+            pin.value(0)
